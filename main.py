@@ -24,7 +24,7 @@ class Motor:
             self.tipo = tipo
 
 class Auto:
-
+    registro = ""
     def __init__(self,modelo,precio,marca,asientos,registro,cantidadCreados):
         self.modelo = modelo
         self.precio = precio
@@ -41,10 +41,9 @@ class Auto:
                 objetos = objetos + 1
         return objetos
     
-    @classmethod
-    def verificarIntegridad(cls):
-        if Motor.registro == cls.registro :
-            for x in cls.asientos:
+    def verificarIntegridad(self):
+        if Motor.registro == self.registro :
+            for x in self.asientos:
                 if x != None:
                     if x.registro != Motor.registro:
                         return "Las piezas no son originales"

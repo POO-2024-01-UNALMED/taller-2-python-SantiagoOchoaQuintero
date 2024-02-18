@@ -51,14 +51,5 @@ class Auto:
             return "Las piezas no son originales"
 
 
-x = Auto()
-n1 = Asiento()
-n2 = Asiento()
-
-x.asientos.append(n1)
-x.asientos.append(n2)
-print(x.verificarIntegridad())         
-
-
 
         

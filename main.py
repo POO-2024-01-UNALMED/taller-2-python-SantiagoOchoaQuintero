@@ -10,10 +10,11 @@ class Asiento:
 
 
 class Motor:
-    def __init__(self,numeroCilindros,tipo,registro):
+    registro = ""
+    def __init__(self,numeroCilindros,tipo,regis):
         self.numeroCilindros = numeroCilindros
         self.tipo = tipo
-        self.registro = registro
+        self.registro = regis
 
     def cambiarRegistro(self,registro):
         self.registro = registro
@@ -39,16 +40,22 @@ class Auto:
             if i != None :
                 objetos = objetos + 1
         return objetos
-
-    def verificarIntegridad(self):
-        if Motor.registro == self.registro :
-            for x in self.asientos:
+    
+    @classmethod
+    def verificarIntegridad(cls):
+        if Motor.registro == cls.registro :
+            for x in cls.asientos:
                 if x != None:
                     if x.registro != Motor.registro:
                         return "Las piezas no son originales"
             return "Auto original"
         else:
             return "Las piezas no son originales"
+
+
+
+
+
 
 
 

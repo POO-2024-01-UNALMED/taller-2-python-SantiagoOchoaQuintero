@@ -31,7 +31,6 @@ class Auto:
         self.marca = marca
         self.asientos.append(asiento)
         self.registro = registro
-        self.cantidadCreados = cantidadCreados
         self.motor = motor
 
 
